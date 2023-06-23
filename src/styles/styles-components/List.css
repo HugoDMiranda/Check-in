@@ -1,0 +1,41 @@
+.one-container {
+  width: 100%;
+  overflow-y: none;
+  margin-top: 20px;
+}
+
+.list-container {
+  width: 80%;
+  overflow-y: scroll;
+}
+
+.list-table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+}
+.list-table .list-header th {
+  background-color: #0e73c6;
+  text-align: left;
+  color: white;
+  padding: 15px;
+}
+.list-table .list-body td {
+  position: relative;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: black;
+}
+.list-table .list-body td:hover:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -9999px;
+  bottom: -9999px;
+  background-color: rgba(86, 170, 255, 0.2);
+  z-index: -1;
+}
+.list-table .list-body tr:hover {
+  background-color: rgba(101, 172, 254, 0.3);
+}/*# sourceMappingURL=List.css.map */

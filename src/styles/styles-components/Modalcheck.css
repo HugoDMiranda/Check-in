@@ -1,0 +1,77 @@
+.modalBackground {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(200, 200, 200, 0.6);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.modalContainer {
+  width: 500px;
+  min-height: 500px;
+  border-radius: 12px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px;
+}
+.modalContainer .checkinText {
+  color: white;
+  border: 1px solid white;
+  padding: 10px;
+  background-color: #0e73c6;
+  width: 95%;
+}
+.modalContainer .checkinClose {
+  width: 40px;
+  padding: 10px;
+  background-color: white;
+  border: none;
+  color: black;
+  transition: 0.5s;
+  cursor: pointer;
+  border: 1px solid #0e73c6;
+}
+.modalContainer .checkinClose:hover {
+  background-color: #0e73c6;
+  border: 1px solid white;
+  color: white;
+}
+.modalContainer .modalForm label {
+  color: #0e73c6;
+}
+.modalContainer .modalForm input {
+  display: block;
+  padding: 10px;
+  margin: 10px 0px;
+  width: 95%;
+}
+.modalContainer .modalForm select {
+  display: block;
+  padding: 10px;
+  margin: 10px 0px;
+  width: 100%;
+}
+.modalContainer .modalForm button {
+  padding: 10px;
+  background-color: white;
+  border: none;
+  color: black;
+  transition: 0.5s;
+  cursor: pointer;
+  border: 1px solid #0e73c6;
+}
+.modalContainer .modalForm button:hover {
+  background-color: #0e73c6;
+  border: 1px solid white;
+  color: white;
+}
+.modalContainer .modalForm span {
+  display: block;
+  margin-bottom: 15px;
+  color: red;
+}/*# sourceMappingURL=Modalcheck.css.map */

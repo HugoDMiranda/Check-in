@@ -1,0 +1,11 @@
+* {
+  font-family: "Montserrat", sans-serif;
+  .App {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 98vh;
+    flex-direction: column;
+  }
+}

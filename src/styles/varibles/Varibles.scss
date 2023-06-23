@@ -1,0 +1,58 @@
+@mixin closeButton {
+  width: 40px;
+  padding: 10px;
+  background-color: white;
+  border: none;
+  color: black;
+  transition: 0.5s;
+  cursor: pointer;
+  border: 1px solid #0e73c6;
+
+  &:hover {
+    background-color: #0e73c6;
+    border: 1px solid white;
+    color: white;
+  }
+}
+
+@mixin formStyle {
+  label {
+    color: #0e73c6;
+  }
+  input {
+    display: block;
+    padding: 10px;
+    margin: 10px 0px;
+    width: 95%;
+  }
+  select {
+    display: block;
+    padding: 10px;
+    margin: 10px 0px;
+    width: 100%;
+  }
+
+  button {
+    padding: 10px;
+    background-color: white;
+    border: none;
+    color: black;
+    transition: 0.5s;
+    cursor: pointer;
+    border: 1px solid #0e73c6;
+
+    &:hover {
+      background-color: #0e73c6;
+      border: 1px solid white;
+      color: white;
+    }
+  }
+}
+
+@mixin modalText {
+  color: white;
+  border: 1px solid white;
+  padding: 10px;
+  background-color: #0e73c6;
+  width: 95%;
+}

@@ -1,0 +1,15 @@
+@import "../varibles/Varibles.scss";
+
+.modalContainer {
+  .bookingClose {
+    @include closeButton();
+  }
+
+  .bookingText {
+    @include modalText();
+  }
+
+  .modalForm {
+    @include formStyle();
+  }
+}

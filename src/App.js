@@ -1,23 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import "./styles/App.css";
+import { useState, useEffect } from "react";
+import Buttons from "./components/Buttons";
+import List from "./components/List";
+import Logo from "./components/Logo";
+import Modalcheck from "./components/Modalcheck";
+import Modalbooking from "./components/Modalbooking";
+import axios from "axios";
 
 function App() {
+  const [listOfPassengers, setListOfPassengers] = useState([]);
+  const [openModalcheck, setOpenModalcheck] = useState(false);
+  const [openModalbooking, setOpenModalbooking] = useState(false);
+
+  useEffect(() => {
+    axios.get("http://localhost:3001/passengers").then((response) => {
+      setListOfPassengers(response.data);
+    });
+  }, [listOfPassengers]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Logo />
+      <Buttons
+        setOpenModalcheck={setOpenModalcheck}
+        setOpenModalbooking={setOpenModalbooking}
+      />
+      {openModalcheck && (
+        <Modalcheck
+          closeModalcheck={setOpenModalcheck}
+          setListOfPassengers={setListOfPassengers}
+          listOfPassengers={listOfPassengers}
+        />
+      )}
+      {openModalbooking && (
+        <Modalbooking
+          closeModalbooking={setOpenModalbooking}
+          listOfPassengers={listOfPassengers}
+        />
+      )}
+      <List listOfPassengers={listOfPassengers} />
     </div>
   );
 }

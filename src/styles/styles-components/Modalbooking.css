@@ -1,0 +1,45 @@
+.modalContainer .bookingClose {
+  width: 40px;
+  padding: 10px;
+  background-color: white;
+  border: none;
+  color: black;
+  transition: 0.5s;
+  cursor: pointer;
+  border: 1px solid #0e73c6;
+}
+.modalContainer .bookingClose:hover {
+  background-color: #0e73c6;
+  border: 1px solid white;
+  color: white;
+}
+.modalContainer .bookingText {
+  color: white;
+  border: 1px solid white;
+  padding: 10px;
+  background-color: #0e73c6;
+  width: 95%;
+}
+.modalContainer .modalForm label {
+  color: #0e73c6;
+}
+.modalContainer .modalForm input {
+  display: block;
+  padding: 10px;
+  margin: 10px 0px;
+  width: 95%;
+}
+.modalContainer .modalForm button {
+  padding: 10px;
+  background-color: white;
+  border: none;
+  color: black;
+  transition: 0.5s;
+  cursor: pointer;
+  border: 1px solid #0e73c6;
+}
+.modalContainer .modalForm button:hover {
+  background-color: #0e73c6;
+  border: 1px solid white;
+  color: white;
+}/*# sourceMappingURL=Modalbooking.css.map */
