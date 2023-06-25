@@ -13,9 +13,11 @@ function App() {
   const [openModalbooking, setOpenModalbooking] = useState(false);
 
   useEffect(() => {
-    axios.get("http://localhost:3001/passengers").then((response) => {
-      setListOfPassengers(response.data);
-    });
+    axios
+      .get("server-check-in-production.up.railway.app/passengers")
+      .then((response) => {
+        setListOfPassengers(response.data);
+      });
   }, [listOfPassengers]);
 
   return (

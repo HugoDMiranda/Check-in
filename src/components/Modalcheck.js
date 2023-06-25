@@ -22,7 +22,7 @@ function Modalcheck({ closeModalcheck, listOfPassengers }) {
   }, [chairs, listOfPassengers]);
 
   const submit = (e) => {
-    Axios.post("http://localhost:3001/checkin", {
+    Axios.post("server-check-in-production.up.railway.app/checkin", {
       name: e.name,
       email: e.email,
       number: e.number,
