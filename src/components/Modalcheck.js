@@ -22,7 +22,7 @@ function Modalcheck({ closeModalcheck, listOfPassengers }) {
   }, [chairs, listOfPassengers]);
 
   const submit = (e) => {
-    Axios.post("server-check-in-production.up.railway.app/checkin", {
+    Axios.post("https://blue-tense-bighorn-sheep.cyclic.app/checkin", {
       name: e.name,
       email: e.email,
       number: e.number,

@@ -14,7 +14,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("server-check-in-production.up.railway.app/passengers")
+      .get("https://blue-tense-bighorn-sheep.cyclic.app/passengers")
       .then((response) => {
         setListOfPassengers(response.data);
       });
