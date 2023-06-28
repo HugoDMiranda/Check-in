@@ -1,6 +1,9 @@
 * {
   font-family: "Montserrat", sans-serif;
 }
+* body {
+  background: #d4e9fe;
+}
 * .App {
   display: flex;
   justify-content: space-around;
