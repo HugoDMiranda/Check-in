@@ -14,7 +14,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("https://blue-tense-bighorn-sheep.cyclic.app/passengers")
+      .get("https://server-check-in.onrender.com/passengers")
       .then((response) => {
         setListOfPassengers(response.data);
       });
