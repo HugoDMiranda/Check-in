@@ -6,6 +6,7 @@ import Logo from "./components/Logo";
 import Modalcheck from "./components/Modalcheck";
 import Modalbooking from "./components/Modalbooking";
 import axios from "axios";
+import Loading from "./components/Loading";
 
 function App() {
   const [listOfPassengers, setListOfPassengers] = useState([]);
@@ -18,29 +19,36 @@ function App() {
       .then((response) => {
         setListOfPassengers(response.data);
       });
+    console.log(listOfPassengers);
   }, [listOfPassengers]);
 
   return (
     <div className="App">
-      <Logo />
-      <Buttons
-        setOpenModalcheck={setOpenModalcheck}
-        setOpenModalbooking={setOpenModalbooking}
-      />
-      {openModalcheck && (
-        <Modalcheck
-          closeModalcheck={setOpenModalcheck}
-          setListOfPassengers={setListOfPassengers}
-          listOfPassengers={listOfPassengers}
-        />
+      {listOfPassengers[1] ? (
+        <>
+          <Logo />
+          <Buttons
+            setOpenModalcheck={setOpenModalcheck}
+            setOpenModalbooking={setOpenModalbooking}
+          />
+          {openModalcheck && (
+            <Modalcheck
+              closeModalcheck={setOpenModalcheck}
+              setListOfPassengers={setListOfPassengers}
+              listOfPassengers={listOfPassengers}
+            />
+          )}
+          {openModalbooking && (
+            <Modalbooking
+              closeModalbooking={setOpenModalbooking}
+              listOfPassengers={listOfPassengers}
+            />
+          )}
+          <List listOfPassengers={listOfPassengers} />
+        </>
+      ) : (
+        <Loading />
       )}
-      {openModalbooking && (
-        <Modalbooking
-          closeModalbooking={setOpenModalbooking}
-          listOfPassengers={listOfPassengers}
-        />
-      )}
-      <List listOfPassengers={listOfPassengers} />
     </div>
   );
 }
