@@ -7,11 +7,17 @@
   .name {
     color: #0e73c6;
     border: 1px solid #0e73c6;
-    padding: 10px;
+    padding: 5px;
     border-radius: 20px;
     font-weight: 200;
+    background-color: white;
+    margin: 10px;
   }
   .logo-plane {
     width: 250px;
+  }
+
+  .logo-loading {
+    width: 50px;
   }
 }

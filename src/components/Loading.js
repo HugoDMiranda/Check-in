@@ -1,10 +1,12 @@
 import React from "react";
 import ClockLoader from "react-spinners/ClockLoader";
 import "../styles/styles-components/Loading.css";
+import Logo from "./Logo";
 
 function Loading() {
   return (
-    <>
+    <div className="loading-container">
+      <Logo logoLoading={`logo-loading`} />
       <ClockLoader
         color={"#0e73c6"}
         loading={true}
@@ -19,7 +21,7 @@ function Loading() {
           redirected
         </p>
       </div>
-    </>
+    </div>
   );
 }
 
