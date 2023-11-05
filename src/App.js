@@ -27,10 +27,6 @@ function App() {
       {listOfPassengers[1] ? (
         <>
           <Logo />
-          <Buttons
-            setOpenModalcheck={setOpenModalcheck}
-            setOpenModalbooking={setOpenModalbooking}
-          />
           {openModalcheck && (
             <Modalcheck
               closeModalcheck={setOpenModalcheck}
@@ -44,7 +40,16 @@ function App() {
               listOfPassengers={listOfPassengers}
             />
           )}
-          <List listOfPassengers={listOfPassengers} />
+          <main className="check-container">
+            <div className="check-container-info">check-in info</div>
+            <div className="check-container-booking">
+              <Buttons
+                setOpenModalcheck={setOpenModalcheck}
+                setOpenModalbooking={setOpenModalbooking}
+              />
+              <List listOfPassengers={listOfPassengers} />
+            </div>
+          </main>
         </>
       ) : (
         <Loading />
