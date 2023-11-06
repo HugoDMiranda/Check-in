@@ -7,6 +7,7 @@ import Modalcheck from "./components/Modalcheck";
 import Modalbooking from "./components/Modalbooking";
 import axios from "axios";
 import Loading from "./components/Loading";
+import CheckInfo from "./components/CheckInfo";
 
 function App() {
   const [listOfPassengers, setListOfPassengers] = useState([]);
@@ -41,7 +42,7 @@ function App() {
             />
           )}
           <main className="check-container">
-            <div className="check-container-info">check-in info</div>
+            <CheckInfo />
             <div className="check-container-booking">
               <Buttons
                 setOpenModalcheck={setOpenModalcheck}
