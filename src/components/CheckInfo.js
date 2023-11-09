@@ -6,10 +6,19 @@ function CheckInfo() {
     <div className="check-container-info">
       <div className="check-container-info-fly">
         <h3>Vuelo XXX</h3>
-        <p>Bogota a Medellin</p>
-        <p>1 hora aprox</p>
-        <p>Puerta de embarque a las XX:XX</p>
-        <p>Finaliza a las XX:XX</p>
+        <div className="check-container-info-fly-general">
+          <div>
+            <p>Bogota a Medellin</p>
+            <p>1 hora aprox</p>
+          </div>
+          <div>
+            <img src="img/QR.png" alt="QR" />
+          </div>
+        </div>
+        <div className="check-container-info-fly-times">
+          <p>Embarque a las XX:XX</p>
+          <p>Finaliza a las XX:XX</p>
+        </div>
       </div>
       <div className="check-container-info-team">
         <h4>Our team</h4>
