@@ -1,5 +1,6 @@
 import React from "react";
 import "../styles/styles-components/CheckInfo.css";
+import { SlUserFemale, SlUser } from "react-icons/sl";
 
 function CheckInfo() {
   return (
@@ -22,11 +23,19 @@ function CheckInfo() {
       </div>
       <div className="check-container-info-team">
         <h4>Our team</h4>
-        <h3>Piloto X</h3>
+        <h3>
+          <SlUser />
+        </h3>
         <div className="check-container-info-team-help">
-          <p>Asafatas</p>
-          <p>Asafatas</p>
-          <p>Asafatas</p>
+          <p>
+            <SlUserFemale />
+          </p>
+          <p>
+            <SlUserFemale />
+          </p>
+          <p>
+            <SlUserFemale />
+          </p>
         </div>
       </div>
     </div>
