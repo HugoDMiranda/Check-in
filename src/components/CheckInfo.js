@@ -23,19 +23,11 @@ function CheckInfo() {
       </div>
       <div className="check-container-info-team">
         <h4>Our team</h4>
-        <h3>
-          <SlUser />
-        </h3>
+        <SlUser className="team pilot" size="120px" />
         <div className="check-container-info-team-help">
-          <p>
-            <SlUserFemale />
-          </p>
-          <p>
-            <SlUserFemale />
-          </p>
-          <p>
-            <SlUserFemale />
-          </p>
+          <SlUserFemale size="55px" className="team" />
+          <SlUserFemale size="55px" className="team" />
+          <SlUserFemale size="55px" className="team" />
         </div>
       </div>
     </div>

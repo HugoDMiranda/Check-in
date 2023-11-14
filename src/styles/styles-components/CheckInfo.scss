@@ -67,10 +67,10 @@
     flex-direction: column;
     flex: 1;
 
-    h3 {
+    .pilot {
       border: 1px solid #0e73c6;
-      border-radius: 50px;
-      padding: 40px 15px;
+      border-radius: 50%;
+      padding: 5px;
       margin: 5px;
     }
 
@@ -79,12 +79,11 @@
       align-items: center;
       justify-content: center;
 
-      p {
+      .team {
         border: 1px solid #0e73c6;
-        border-radius: 50px;
-        padding: 40px 20px;
+        border-radius: 50%;
+        padding: 5px;
         margin: 5px;
-        font-size: smaller;
       }
     }
   }

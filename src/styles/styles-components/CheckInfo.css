@@ -61,10 +61,10 @@
   flex-direction: column;
   flex: 1;
 }
-.check-container-info-team h3 {
+.check-container-info-team .pilot {
   border: 1px solid #0e73c6;
-  border-radius: 50px;
-  padding: 40px 15px;
+  border-radius: 50%;
+  padding: 5px;
   margin: 5px;
 }
 .check-container-info-team-help {
@@ -72,10 +72,9 @@
   align-items: center;
   justify-content: center;
 }
-.check-container-info-team-help p {
+.check-container-info-team-help .team {
   border: 1px solid #0e73c6;
-  border-radius: 50px;
-  padding: 40px 20px;
+  border-radius: 50%;
+  padding: 5px;
   margin: 5px;
-  font-size: smaller;
 }/*# sourceMappingURL=CheckInfo.css.map */
