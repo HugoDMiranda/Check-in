@@ -12,7 +12,10 @@
     width: 100%;
     height: 95vh;
     flex-direction: column;
-    flex-wrap: wrap;
+
+    .logo-container {
+      margin-bottom: 10px;
+    }
 
     .check-container {
       display: flex;
@@ -31,6 +34,7 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        margin: 10px 0px;
       }
     }
   }
