@@ -1,6 +1,8 @@
 import React from "react";
 import "../styles/styles-components/CheckInfo.css";
 import { SlUserFemale, SlUser } from "react-icons/sl";
+import "react-tooltip/dist/react-tooltip.css";
+import { Tooltip } from "react-tooltip";
 
 function CheckInfo() {
   return (
@@ -23,11 +25,35 @@ function CheckInfo() {
       </div>
       <div className="check-container-info-team">
         <h4>Our team</h4>
-        <SlUser className="team pilot" size="120px" />
+        <SlUser
+          className="team pilot"
+          size="120px"
+          data-tooltip-id="my-tooltip"
+          data-tooltip-content="Pilot"
+        />
+        <Tooltip
+          id="my-tooltip"
+          style={{ backgroundColor: "#0e73c6", color: "white" }}
+        />
         <div className="check-container-info-team-help">
-          <SlUserFemale size="55px" className="team" />
-          <SlUserFemale size="55px" className="team" />
-          <SlUserFemale size="55px" className="team" />
+          <SlUserFemale
+            size="55px"
+            className="team"
+            data-tooltip-id="my-tooltip"
+            data-tooltip-content="Stewardesses"
+          />
+          <SlUserFemale
+            size="55px"
+            className="team"
+            data-tooltip-id="my-tooltip"
+            data-tooltip-content="Stewardesses"
+          />
+          <SlUserFemale
+            size="55px"
+            className="team"
+            data-tooltip-id="my-tooltip"
+            data-tooltip-content="Stewardesses"
+          />
         </div>
       </div>
     </div>
