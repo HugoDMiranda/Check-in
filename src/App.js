@@ -27,7 +27,17 @@ function App() {
     <div className="App">
       {listOfPassengers[1] ? (
         <>
-          <Logo />
+          <div className="check-navbar">
+            <Logo />
+            <div className="check-navbar-inputs">
+              <input placeholder="Look for your Fly" />
+            </div>
+            <div className="check-navbar-inputs">
+              <input placeholder="Look for your Information" />
+            </div>
+            <button className="check-navbar-button">Search</button>
+          </div>
+
           {openModalcheck && (
             <Modalcheck
               closeModalcheck={setOpenModalcheck}

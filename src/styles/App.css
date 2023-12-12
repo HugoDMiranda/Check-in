@@ -12,8 +12,37 @@
   height: 95vh;
   flex-direction: column;
 }
-* .App .logo-container {
-  margin-bottom: 10px;
+* .App .check-navbar {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: center;
+}
+* .App .check-navbar-inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 15px;
+  justify-content: center;
+}
+* .App .check-navbar-inputs h3 {
+  margin: 0px;
+  margin-bottom: 2px;
+}
+* .App .check-navbar-inputs input {
+  width: 200px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+* .App .check-navbar-button {
+  background-color: #0e73c6;
+  border-radius: 25px;
+  border: 1px solid white;
+  color: white;
+  font-weight: 700;
+  height: 40px;
+  width: 100px;
 }
 * .App .check-container {
   display: flex;
