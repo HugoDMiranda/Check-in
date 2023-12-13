@@ -44,6 +44,13 @@
         font-weight: 700;
         height: 40px;
         width: 100px;
+        transition: 0.5s;
+        cursor: pointer;
+        &:hover {
+          background-color: white;
+          border: 1px solid #0e73c6;
+          color: #0e73c6;
+        }
       }
     }
 
