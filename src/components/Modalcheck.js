@@ -22,7 +22,7 @@ function Modalcheck({ closeModalcheck, listOfPassengers }) {
   }, [chairs, listOfPassengers]);
 
   const submit = (e) => {
-    Axios.post("https://server-check-in.onrender.com/checkin", {
+    Axios.post("https://server-check-in.onrender.com/api/passengers/checkin", {
       name: e.name,
       email: e.email,
       number: e.number,

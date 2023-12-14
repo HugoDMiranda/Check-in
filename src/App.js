@@ -16,7 +16,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("https://server-check-in.onrender.com/passengers")
+      .get("https://server-check-in.onrender.com/api/passengers")
       .then((response) => {
         setListOfPassengers(response.data);
       });
