@@ -8,6 +8,7 @@ import Modalbooking from "./components/Modalbooking";
 import axios from "axios";
 import Loading from "./components/Loading";
 import CheckInfo from "./components/CheckInfo";
+import Footer from "./components/Footer";
 
 function App() {
   const [listOfPassengers, setListOfPassengers] = useState([]);
@@ -65,6 +66,7 @@ function App() {
       ) : (
         <Loading />
       )}
+      <Footer />
     </div>
   );
 }

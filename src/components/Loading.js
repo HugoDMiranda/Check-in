@@ -10,7 +10,7 @@ function Loading() {
       <ClockLoader
         color={"#0e73c6"}
         loading={true}
-        size={250}
+        size={200}
         aria-label="Loading Spinner"
         data-testid="loader"
       />
