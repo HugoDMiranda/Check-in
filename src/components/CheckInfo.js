@@ -1,10 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import "../styles/styles-components/CheckInfo.css";
 import { SlUserFemale, SlUser } from "react-icons/sl";
 import "react-tooltip/dist/react-tooltip.css";
 import { Tooltip } from "react-tooltip";
 
 function CheckInfo() {
+  const [listOfTeam, setListOfTeam] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("https://server-check-in.onrender.com/api/team")
+      .then((response) => {
+        setListOfTeam(response.data);
+      });
+    console.log(listOfTeam);
+  }, [listOfTeam]);
+
   return (
     <div className="check-container-info">
       <div className="check-container-info-fly">
