@@ -2,11 +2,11 @@ import "../styles/App.css";
 import { useState, useEffect } from "react";
 import Buttons from "../components/Buttons";
 import List from "../components/List";
-import Logo from "../components/Logo";
 import Modalcheck from "../components/Modalcheck";
 import Modalbooking from "../components/Modalbooking";
 import axios from "axios";
 import CheckInfo from "../components/CheckInfo";
+import Navbar from "../components/Navbar";
 
 function Checkin() {
   const [listOfPassengers, setListOfPassengers] = useState([]);
@@ -24,17 +24,7 @@ function Checkin() {
 
   return (
     <>
-      <div className="check-navbar">
-        <Logo />
-        <div className="check-navbar-inputs">
-          <input placeholder="Look for your Fly" />
-        </div>
-        <div className="check-navbar-inputs">
-          <input placeholder="Look for your Information" />
-        </div>
-        <button className="check-navbar-button">Search</button>
-      </div>
-
+      <Navbar />
       {openModalcheck && (
         <Modalcheck
           closeModalcheck={setOpenModalcheck}

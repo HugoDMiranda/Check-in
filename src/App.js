@@ -29,7 +29,7 @@ function App() {
         transition={{ type: "tween", duration: 1 }}
       >
         <div className="App">
-          <AnimatedRoutes />
+          {listOfPassengers[1] ? <AnimatedRoutes /> : <Loading />}
           <Footer />
         </div>
       </motion.div>
