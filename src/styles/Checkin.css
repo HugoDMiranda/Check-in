@@ -1,0 +1,18 @@
+.check-container {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  height: 80%;
+  flex-wrap: wrap;
+}
+.check-container-booking {
+  min-width: 40%;
+  height: 100%;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  margin: 10px 0px;
+}/*# sourceMappingURL=Checkin.css.map */

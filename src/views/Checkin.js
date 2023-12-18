@@ -1,4 +1,4 @@
-import "../styles/App.css";
+import "../styles/Checkin.css";
 import { useState, useEffect } from "react";
 import Buttons from "../components/Buttons";
 import List from "../components/List";

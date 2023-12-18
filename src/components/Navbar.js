@@ -1,4 +1,5 @@
 import Logo from "./Logo";
+import "../styles/styles-components/Navbar.css";
 
 function Navbar() {
   return (

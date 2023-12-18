@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import Loading from "./components/Loading";
 import Footer from "./components/Footer";
-import Checkin from "./views/Checkin";
 import { motion } from "framer-motion";
 import { BrowserRouter as Router } from "react-router-dom";
 import AnimatedRoutes from "./components/AnimatedRoutes.js";
@@ -34,11 +33,6 @@ function App() {
         </div>
       </motion.div>
     </Router>
-
-    // <div className="App">
-    //   {listOfPassengers[1] ? <Checkin /> : <Loading />}
-    //   <Footer />
-    // </div>
   );
 }
 
