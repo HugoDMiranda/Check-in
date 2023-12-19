@@ -7,10 +7,9 @@ function Navbar() {
       <Logo />
       <div className="check-navbar-inputs">
         <input placeholder="Look for your Fly" />
-      </div>
-      <div className="check-navbar-inputs">
         <input placeholder="Look for your Information" />
       </div>
+      {/* <div className="check-navbar-inputs"></div> */}
       <button className="check-navbar-button">Search</button>
     </div>
   );

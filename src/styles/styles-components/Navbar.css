@@ -3,13 +3,15 @@
   width: 100%;
   flex-wrap: wrap;
   align-items: center;
+  margin: 5px;
+  justify-content: center;
 }
 .check-navbar-inputs {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  margin-right: 15px;
   justify-content: center;
+  flex-wrap: wrap;
 }
 .check-navbar-inputs h3 {
   margin: 0px;
@@ -20,6 +22,7 @@
   padding: 10px;
   border-radius: 10px;
   border: 1px solid black;
+  margin: 5px 5px;
 }
 .check-navbar-button {
   background-color: #0e73c6;
@@ -30,6 +33,7 @@
   height: 40px;
   width: 100px;
   transition: 0.5s;
+  margin: 5px;
   cursor: pointer;
 }
 .check-navbar-button:hover {
