@@ -1,1 +1,47 @@
-/*# sourceMappingURL=Flights.css.map */
+.flights-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.flights-container-info {
+  min-height: 310px;
+  font-size: 50px;
+  color: white;
+  width: 100%;
+  text-align: center;
+}
+.flights-container-info summary,
+.flights-container-info p {
+  position: relative;
+}
+.flights-container .domestic {
+  position: relative;
+}
+.flights-container .domestic::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-image: url(https://peruretail.sfo3.cdn.digitaloceanspaces.com/wp-content/uploads/viaje-768x432.webp);
+  opacity: 0.25;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.flights-container .international {
+  position: relative;
+}
+.flights-container .international::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-image: url(https://cdn.businessinsider.es/sites/navi.axelspringer.es/public/media/image/2019/07/viajar-avion_4.jpg?tf=1200x);
+  opacity: 0.25;
+  background-repeat: no-repeat;
+  background-size: cover;
+}/*# sourceMappingURL=Flights.css.map */
