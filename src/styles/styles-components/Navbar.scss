@@ -3,8 +3,15 @@
   width: 100%;
   flex-wrap: wrap;
   align-items: center;
-  margin: 5px 0px;
+  padding: 5px 0px;
   justify-content: center;
+  background: rgb(2, 0, 36);
+  background: radial-gradient(
+    circle,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 37%,
+    rgba(0, 212, 255, 1) 100%
+  );
 
   &-inputs {
     display: flex;
