@@ -38,7 +38,7 @@ function Checkin() {
           listOfPassengers={listOfPassengers}
         />
       )}
-      <main className="check-container">
+      <section className="check-container">
         <CheckInfo />
         <div className="check-container-booking">
           <Buttons
@@ -47,7 +47,7 @@ function Checkin() {
           />
           <List listOfPassengers={listOfPassengers} />
         </div>
-      </main>
+      </section>
     </>
   );
 }

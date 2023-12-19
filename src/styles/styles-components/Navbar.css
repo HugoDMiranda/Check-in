@@ -3,7 +3,7 @@
   width: 100%;
   flex-wrap: wrap;
   align-items: center;
-  margin: 5px;
+  margin: 5px 0px;
   justify-content: center;
 }
 .check-navbar-inputs {
