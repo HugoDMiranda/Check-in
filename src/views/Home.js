@@ -19,7 +19,9 @@ function Home() {
             <strong>long-awaited reunion possible</strong>
           </p>
         </div>
-        <div className="home-container-info flights">Vuelos</div>
+        <div className="home-container-info flights">
+          <a href="/flights">Find the flight you want</a>
+        </div>
         <div className="home-container-info team">Nuestro equipo</div>
       </div>
     </main>
