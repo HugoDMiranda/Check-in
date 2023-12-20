@@ -70,4 +70,14 @@
   color: black;
   background: rgb(2, 0, 36);
   background: radial-gradient(circle, rgb(251, 251, 251) 0%, rgb(219, 219, 219) 37%, rgb(165, 165, 165) 100%);
+}
+.home-container .team {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+.home-container .team-cards {
+  width: 80%;
 }/*# sourceMappingURL=Home.css.map */

@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import "../styles/Home.css";
+import TeamCard from "../components/TeamCard";
 
 function Home() {
   return (
@@ -22,7 +23,12 @@ function Home() {
         <div className="home-container-info flights">
           <a href="/flights">Find the flight you want</a>
         </div>
-        <div className="home-container-info team">Nuestro equipo</div>
+        <div className="home-container-info team">
+          <h3>Out Team</h3>
+          <div className="team-cards">
+            <TeamCard />
+          </div>
+        </div>
       </div>
     </main>
   );
