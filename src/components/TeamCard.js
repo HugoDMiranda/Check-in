@@ -12,15 +12,11 @@ function TeamCard() {
         class="uk-position-relative uk-visible-toggle uk-light uk-slider-container-offset"
         tabindex="-1"
       >
-        <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-2@s uk-child-width-1-3@m uk-child-width-1-4@l uk-grid">
-          <li className="store-container">
-            <img
-              src="img/airplane.png"
-              width="1800"
-              height="1200"
-              alt="QR"
-              className="store-container-link-img"
-            />
+        <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m uk-child-width-1-5@l uk-grid">
+          <li className="store-container team-card">
+            <SlUser size="140px" className="team-card-icon" />
+            <h4>Nombre del trabajador</h4>
+            <p>Piloto</p>
           </li>
           <li className="store-container">
             <img

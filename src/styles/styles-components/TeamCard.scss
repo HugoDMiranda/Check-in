@@ -1,13 +1,22 @@
-.slider-stores {
-  margin: o;
+.team-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  &-icon {
+    color: black;
+    border: 1px solid gray;
+    padding: 5px;
+    border-radius: 50%;
+    margin-bottom: 30px;
+  }
+  h4 {
+    margin: 2px;
+    text-align: center;
+    color: black;
+  }
+  p {
+    margin: 2px;
+    color: gray;
+  }
 }
-
-// .img {
-//   display: flex;
-//   align-items: center;
-//   justify-content: center;
-// }
-
-// .text {
-//   text-align: center;
-// }

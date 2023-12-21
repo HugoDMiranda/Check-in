@@ -24,7 +24,7 @@ function Home() {
           <a href="/flights">Find the flight you want</a>
         </div>
         <div className="home-container-info team">
-          <h3>Out Team</h3>
+          <h3>Our Team</h3>
           <div className="team-cards">
             <TeamCard />
           </div>
