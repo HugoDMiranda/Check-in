@@ -5,14 +5,14 @@ import { SlUserFemale, SlUser } from "react-icons/sl";
 function TeamCard() {
   return (
     <div
-      class="uk-slider-container-offset slider-stores"
+      className="uk-slider-container-offset slider-stores"
       uk-slider=" index: 4; autoplay: true; autoplay-interval: 3000 "
     >
       <div
-        class="uk-position-relative uk-visible-toggle uk-light uk-slider-container-offset"
+        className="uk-position-relative uk-visible-toggle uk-light uk-slider-container-offset"
         tabindex="-1"
       >
-        <ul class="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m uk-child-width-1-5@l uk-grid">
+        <ul className="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m uk-child-width-1-5@l uk-grid">
           <li className="store-container team-card">
             <SlUser size="140px" className="team-card-icon" />
             <h4>Nombre del trabajador</h4>
@@ -44,7 +44,7 @@ function TeamCard() {
               alt="QR"
               className="store-container-link-img"
             />
-          </li>{" "}
+          </li>
           <li className="store-container">
             <img
               src="img/QR.png"
@@ -53,7 +53,7 @@ function TeamCard() {
               alt="QR"
               className="store-container-link-img"
             />
-          </li>{" "}
+          </li>
           <li className="store-container">
             <img
               src="img/airplane.png"

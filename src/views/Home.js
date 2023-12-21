@@ -9,7 +9,8 @@ function Home() {
       <Navbar />
       <div className="home-container">
         <div className="home-container-info summary">
-          <img className="name" src="img/check_text.png" alt="check_text" />
+          {/* <img className="name" src="img/check_text.png" alt="check_text" /> */}
+          <h1>Check_in App</h1>
           <img src="img/check_in.png" alt="logo-plane" className="logo-plane" />
 
           <p>
