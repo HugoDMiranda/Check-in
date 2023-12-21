@@ -11,7 +11,8 @@
 }
 .loading-text {
   background-color: white;
-  border-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
   margin: 0;
   padding: 20px 5px;
 }
@@ -22,5 +23,17 @@
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  min-height: 650px;
+  min-height: 677px;
+  background: rgb(2, 0, 36);
+  background: radial-gradient(circle, rgb(2, 0, 36) 0%, rgb(9, 9, 121) 37%, rgb(0, 212, 255) 100%);
+}
+.loading-container h2 {
+  font-size: 50px;
+  color: rgb(9, 9, 121);
+  background-color: white;
+  padding: 2px 10px 7px 10px;
+  border-radius: 50px;
+  align-items: center;
+  margin-top: 10px;
+  border: 2px solid rgb(9, 9, 121);
 }/*# sourceMappingURL=Loading.css.map */

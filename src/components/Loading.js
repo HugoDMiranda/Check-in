@@ -7,8 +7,9 @@ function Loading() {
   return (
     <div className="loading-container">
       <Logo logoLoading={`logo-loading`} />
+      <h2>Check_in App</h2>
       <ClockLoader
-        color={"#0e73c6"}
+        color={"white"}
         loading={true}
         size={200}
         aria-label="Loading Spinner"
