@@ -4,7 +4,7 @@
   flex-wrap: wrap;
   align-items: center;
   padding: 5px 0px;
-  justify-content: center;
+  justify-content: space-between;
   background: rgb(2, 0, 36);
   background: radial-gradient(circle, rgb(2, 0, 36) 0%, rgb(9, 9, 121) 37%, rgb(0, 212, 255) 100%);
 }

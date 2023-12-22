@@ -1,9 +1,10 @@
 import React from "react";
 import "../styles/styles-components/FlightsCard.css";
+import { Link } from "react-router-dom";
 
 function FlightsCard() {
   return (
-    <div className="card-container">
+    <Link className="card-container" to="/checkin">
       <div className="card-container-img">
         <img src="img/canada.jpg" alt="destino" />
       </div>
@@ -19,7 +20,7 @@ function FlightsCard() {
           <p>Finaliza a las XX:XX</p>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 

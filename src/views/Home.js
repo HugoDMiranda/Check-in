@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import "../styles/Home.css";
 import TeamCard from "../components/TeamCard";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -22,7 +23,7 @@ function Home() {
           </p>
         </div>
         <div className="home-container-info flights">
-          <a href="/flights">Find the flight you want</a>
+          <Link to="/flights">Find the flight you want</Link>
         </div>
         <div className="home-container-info team">
           <h3>Our Team</h3>
