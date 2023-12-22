@@ -11,9 +11,13 @@
 }
 .logo-container .logo-plane {
   width: 50px;
+  margin-left: 5px;
+  margin-bottom: 5px;
   border-radius: 50px;
+  border: 2px solid white;
 }
 .logo-container .logo-loading {
   width: 80px;
   border-radius: 50px;
+  border: 2px solid white;
 }/*# sourceMappingURL=Logo.css.map */

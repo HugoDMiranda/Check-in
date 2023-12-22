@@ -8,6 +8,22 @@
   background: rgb(2, 0, 36);
   background: radial-gradient(circle, rgb(2, 0, 36) 0%, rgb(9, 9, 121) 37%, rgb(0, 212, 255) 100%);
 }
+.check-navbar details {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: row;
+  color: white;
+  background-color: rgb(9, 9, 121);
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+  border: 2px solid white;
+  border-radius: 20px;
+  margin-right: 5px;
+  padding: 5px 10px;
+}
+.check-navbar details summary {
+  text-align: end;
+}
 .check-navbar-inputs {
   display: flex;
   flex-direction: row;
