@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/styles-components/TeamCard.css";
-import { SlUserFemale, SlUser } from "react-icons/sl";
+import Team from "./Team";
 
 function TeamCard() {
   return (
@@ -13,56 +13,13 @@ function TeamCard() {
         tabindex="-1"
       >
         <ul className="uk-slider-items uk-child-width-1-2 uk-child-width-1-3@s uk-child-width-1-4@m uk-child-width-1-5@l uk-grid">
-          <li className="store-container team-card">
-            <SlUser size="140px" className="team-card-icon" />
-            <h4>Nombre del trabajador</h4>
-            <p>Piloto</p>
-          </li>
-          <li className="store-container">
-            <img
-              src="img/QR.png"
-              width="1800"
-              height="1200"
-              alt="QR"
-              className="store-container-link-img"
-            />
-          </li>
-          <li className="store-container">
-            <img
-              src="img/QR.png"
-              width="1800"
-              height="1200"
-              alt="QR"
-              className="store-container-link-img"
-            />
-          </li>{" "}
-          <li className="store-container">
-            <img
-              src="img/QR.png"
-              width="1800"
-              height="1200"
-              alt="QR"
-              className="store-container-link-img"
-            />
-          </li>
-          <li className="store-container">
-            <img
-              src="img/QR.png"
-              width="1800"
-              height="1200"
-              alt="QR"
-              className="store-container-link-img"
-            />
-          </li>
-          <li className="store-container">
-            <img
-              src="img/airplane.png"
-              width="1800"
-              height="1200"
-              alt="QR"
-              className="store-container-link-img"
-            />
-          </li>
+          <Team />
+          <Team />
+          <Team />
+          <Team />
+          <Team />
+          <Team />
+          <Team />
         </ul>
       </div>
     </div>
