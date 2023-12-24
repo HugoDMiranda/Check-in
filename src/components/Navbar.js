@@ -16,12 +16,6 @@ function Navbar() {
           <button className="check-navbar-button">Search</button>
         </div>
       </details>
-
-      {/* <div className="check-navbar-inputs">
-        <input placeholder="Look for your Fly" />
-        <input placeholder="Look for your Information" />
-      </div>
-      <button className="check-navbar-button">Search</button> */}
     </div>
   );
 }

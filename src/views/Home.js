@@ -1,10 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import "../styles/Home.css";
 import TeamCard from "../components/TeamCard";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 function Home() {
+  const [listOfTeam, setListOfTeam] = useState([]);
+
+  useEffect(() => {
+    axios
+      .get("https://server-check-in.onrender.com/api/team")
+      .then((response) => {
+        setListOfTeam(response.data);
+      });
+    console.log(listOfTeam);
+  }, [listOfTeam]);
+
   return (
     <main>
       <Navbar />
@@ -27,7 +39,7 @@ function Home() {
         <div className="home-container-info team">
           <h3>Our Team</h3>
           <div className="team-cards">
-            <TeamCard />
+            <TeamCard listOfTeam={listOfTeam} />
           </div>
         </div>
       </div>
