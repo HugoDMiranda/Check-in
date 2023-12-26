@@ -10,9 +10,9 @@ function Flights() {
         <details name="flights" className="flights-container-info domestic">
           <summary>Domestic Flights</summary>
           <div className="flights-container-info-card">
-            <FlightsCard />
-            <FlightsCard />
-            <FlightsCard />
+            <FlightsCard img="img/domestic.jpg" />
+            <FlightsCard img="img/domestic.jpg" />
+            <FlightsCard img="img/domestic.jpg" />
           </div>
         </details>
         <details
@@ -21,9 +21,9 @@ function Flights() {
         >
           <summary>International flights</summary>
           <div className="flights-container-info-card">
-            <FlightsCard />
-            <FlightsCard />
-            <FlightsCard />
+            <FlightsCard img="img/international.jpeg" />
+            <FlightsCard img="img/international.jpeg" />
+            <FlightsCard img="img/international.jpeg" />
           </div>
         </details>
       </div>
