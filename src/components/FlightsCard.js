@@ -2,22 +2,31 @@ import React from "react";
 import "../styles/styles-components/FlightsCard.css";
 import { Link } from "react-router-dom";
 
-function FlightsCard({ img }) {
+function FlightsCard({
+  img,
+  origin,
+  destination,
+  course,
+  departure,
+  shipment,
+  number,
+}) {
   return (
-    <Link className="card-container" to="/checkin">
+    <Link className="card-container" to={`/checkin/${number}`}>
       <div className="card-container-img">
         <img src={img} alt="destino" />
       </div>
       <div className="card-container-info">
+        <h3 className="card-container-info-number">{number}</h3>
         <div className="card-container-info-destination">
-          <h3>Colombia</h3>
+          <h3>{origin}</h3>
           <p>-</p>
-          <h3>Canada</h3>
+          <h3>{destination}</h3>
         </div>
         <div className="card-container-info-time">
-          <p>15 horas</p>
-          <p>Embarque a las XX:XX</p>
-          <p>Finaliza a las XX:XX</p>
+          <p>{course}</p>
+          <p>Board at {departure}</p>
+          <p>ends at {shipment}</p>
         </div>
       </div>
     </Link>

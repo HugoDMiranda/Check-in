@@ -1,4 +1,5 @@
 import "../styles/Checkin.css";
+import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Buttons from "../components/Buttons";
 import List from "../components/List";
@@ -9,9 +10,11 @@ import CheckInfo from "../components/CheckInfo";
 import Navbar from "../components/Navbar";
 
 function Checkin() {
+  let { number } = useParams();
   const [listOfPassengers, setListOfPassengers] = useState([]);
   const [openModalcheck, setOpenModalcheck] = useState(false);
   const [openModalbooking, setOpenModalbooking] = useState(false);
+  const [passengers, setPassengers] = useState([]);
 
   useEffect(() => {
     axios
@@ -19,8 +22,13 @@ function Checkin() {
       .then((response) => {
         setListOfPassengers(response.data);
       });
-    // console.log(listOfPassengers);
-  }, [listOfPassengers]);
+
+    axios
+      .get(`https://server-check-in.onrender.com/api/flights/${number}`)
+      .then((response) => {
+        setPassengers(response.data);
+      });
+  }, [listOfPassengers, passengers, number]);
 
   return (
     <>
@@ -28,18 +36,18 @@ function Checkin() {
       {openModalcheck && (
         <Modalcheck
           closeModalcheck={setOpenModalcheck}
-          setListOfPassengers={setListOfPassengers}
-          listOfPassengers={listOfPassengers}
+          setListOfPassengers={setPassengers}
+          listOfPassengers={passengers}
         />
       )}
       {openModalbooking && (
         <Modalbooking
           closeModalbooking={setOpenModalbooking}
-          listOfPassengers={listOfPassengers}
+          listOfPassengers={passengers}
         />
       )}
       <section className="check-container">
-        <CheckInfo />
+        <CheckInfo passengers={passengers[0]?.passengersFound} />
         <div className="check-container-booking">
           <Buttons
             setOpenModalcheck={setOpenModalcheck}
