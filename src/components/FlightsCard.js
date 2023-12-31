@@ -26,7 +26,7 @@ function FlightsCard({
         <div className="card-container-info-time">
           <p>{course}</p>
           <p>Board at {departure}</p>
-          <p>ends at {shipment}</p>
+          <p>Ends at {shipment}</p>
         </div>
       </div>
     </Link>

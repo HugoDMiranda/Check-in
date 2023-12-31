@@ -11,24 +11,19 @@ import Navbar from "../components/Navbar";
 
 function Checkin() {
   let { number } = useParams();
-  const [listOfPassengers, setListOfPassengers] = useState([]);
   const [openModalcheck, setOpenModalcheck] = useState(false);
   const [openModalbooking, setOpenModalbooking] = useState(false);
+  const [response, setResponse] = useState([]);
   const [passengers, setPassengers] = useState([]);
 
   useEffect(() => {
     axios
-      .get("https://server-check-in.onrender.com/api/passengers")
-      .then((response) => {
-        setListOfPassengers(response.data);
-      });
-
-    axios
       .get(`https://server-check-in.onrender.com/api/flights/${number}`)
       .then((response) => {
-        setPassengers(response.data);
+        setResponse(response.data[0]);
+        setPassengers(response?.data[0].passengersFound);
       });
-  }, [listOfPassengers, passengers, number]);
+  }, [passengers, number]);
 
   return (
     <>
@@ -36,8 +31,8 @@ function Checkin() {
       {openModalcheck && (
         <Modalcheck
           closeModalcheck={setOpenModalcheck}
-          setListOfPassengers={setPassengers}
           listOfPassengers={passengers}
+          number={number}
         />
       )}
       {openModalbooking && (
@@ -47,13 +42,13 @@ function Checkin() {
         />
       )}
       <section className="check-container">
-        <CheckInfo passengers={passengers[0]?.passengersFound} />
+        <CheckInfo response={response} />
         <div className="check-container-booking">
           <Buttons
             setOpenModalcheck={setOpenModalcheck}
             setOpenModalbooking={setOpenModalbooking}
           />
-          <List listOfPassengers={listOfPassengers} />
+          <List listOfPassengers={passengers} />
         </div>
       </section>
     </>

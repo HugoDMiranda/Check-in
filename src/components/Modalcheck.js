@@ -5,7 +5,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import { useEffect, useState } from "react";
 import { allChairs } from "../data/chairs";
 
-function Modalcheck({ closeModalcheck, listOfPassengers }) {
+function Modalcheck({ closeModalcheck, listOfPassengers, number }) {
   const [chairs, setChairs] = useState([]);
 
   useEffect(() => {
@@ -19,24 +19,27 @@ function Modalcheck({ closeModalcheck, listOfPassengers }) {
       );
 
     setChairs(newArr);
-  }, [chairs, listOfPassengers]);
+  }, [listOfPassengers]);
 
   const submit = (e) => {
     Axios.post("https://server-check-in.onrender.com/api/passengers/checkin", {
       name: e.name,
       email: e.email,
-      number: e.number,
+      cellphone: e.cellphone,
       chair: e.chair,
       meal: e.meal,
+      number: number,
     }).then((response) => {
+      console.log(response);
       alert("PASSENGER CREATED");
     });
+    closeModalcheck(false);
   };
 
   const passengerSchema = yup.object().shape({
     name: yup.string().required(),
     email: yup.string().email().required(),
-    number: yup.number().required(),
+    cellphone: yup.number().required(),
     chair: yup.string().required(),
     meal: yup.mixed().oneOf(["menu#1", "menu#2"]).required(),
   });
@@ -44,7 +47,7 @@ function Modalcheck({ closeModalcheck, listOfPassengers }) {
   const initialValues = {
     name: "",
     email: "",
-    number: "",
+    cellphone: "",
     chair: "",
     meal: "",
   };
@@ -93,16 +96,16 @@ function Modalcheck({ closeModalcheck, listOfPassengers }) {
               component="span"
               className="errorMessage"
             />
-            <label for="number">Number:</label>
+            <label for="cellphone">Cellphone:</label>
             <Field
               autoComplete="off"
               type="number"
-              placeholder="number..."
-              id="number"
-              name="number"
+              placeholder="cellphone..."
+              id="cellphone"
+              name="cellphone"
             />
             <ErrorMessage
-              name="number"
+              name="cellphone"
               component="span"
               className="errorMessage"
             />
@@ -116,7 +119,11 @@ function Modalcheck({ closeModalcheck, listOfPassengers }) {
               name="chair"
             >
               {chairs.map((chair) => {
-                return <option value={chair}>{chair}</option>;
+                return (
+                  <option value={chair} key={chair}>
+                    {chair}
+                  </option>
+                );
               })}
             </Field>
             <ErrorMessage
@@ -134,7 +141,7 @@ function Modalcheck({ closeModalcheck, listOfPassengers }) {
               component="span"
               className="errorMessage"
             />
-            <button>confirm check-in</button>
+            <button type="submit">confirm check-in</button>
           </Form>
         </Formik>
       </div>

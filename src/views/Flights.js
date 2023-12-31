@@ -13,7 +13,6 @@ function Flights() {
       .then((response) => {
         setListOfFlights(response.data);
       });
-    console.log(listOfFlights);
   }, [listOfFlights]);
 
   return (
@@ -33,6 +32,7 @@ function Flights() {
                   departure={flight.departure}
                   shipment={flight.shipment}
                   number={flight.number}
+                  key={flight._id}
                 />
               ) : null;
             })}
@@ -54,6 +54,7 @@ function Flights() {
                   departure={flight.departure}
                   shipment={flight.shipment}
                   number={flight.number}
+                  key={flight._id}
                 />
               ) : null;
             })}

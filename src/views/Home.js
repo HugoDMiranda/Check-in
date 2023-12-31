@@ -14,7 +14,6 @@ function Home() {
       .then((response) => {
         setListOfTeam(response.data);
       });
-    console.log(listOfTeam);
   }, [listOfTeam]);
 
   return (

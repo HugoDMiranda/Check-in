@@ -1,37 +1,25 @@
-import React, { useEffect, useState } from "react";
-import axios from "axios";
 import "../styles/styles-components/CheckInfo.css";
 import { SlUserFemale, SlUser } from "react-icons/sl";
 import "react-tooltip/dist/react-tooltip.css";
 import { Tooltip } from "react-tooltip";
 
-function CheckInfo() {
-  const [listOfTeam, setListOfTeam] = useState([]);
-
-  useEffect(() => {
-    axios
-      .get("https://server-check-in.onrender.com/api/team")
-      .then((response) => {
-        setListOfTeam(response.data);
-      });
-  }, [listOfTeam]);
-
+function CheckInfo({ response }) {
   return (
     <div className="check-container-info">
       <div className="check-container-info-fly">
-        <h3>Vuelo XXX</h3>
+        <h3>Flight {response.number}</h3>
         <div className="check-container-info-fly-general">
           <div>
-            <p>Bogota a Medellin</p>
-            <p>1 hora aprox</p>
+            <p>
+              {response.origin} to {response.destination}
+            </p>
+            <p>{response.course} aprox</p>
           </div>
-          <div>
-            <img src="img/QR.png" alt="QR" />
-          </div>
+          <div>{response ? <img src="img/QR.png" alt="QR" /> : null}</div>
         </div>
         <div className="check-container-info-fly-times">
-          <p>Embarque a las XX:XX</p>
-          <p>Finaliza a las XX:XX</p>
+          <p>Board at {response.shipment}</p>
+          <p>Ends at {response.departure}</p>
         </div>
       </div>
       <div className="check-container-info-team">

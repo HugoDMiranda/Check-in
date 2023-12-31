@@ -19,6 +19,7 @@ function TeamCard({ listOfTeam }) {
                 name={team.name}
                 position={team.position}
                 gender={team.gender}
+                key={team._id}
               />
             );
           })}
