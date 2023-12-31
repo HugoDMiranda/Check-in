@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import { motion } from "framer-motion";
 import { BrowserRouter as Router } from "react-router-dom";
 import AnimatedRoutes from "./components/AnimatedRoutes.js";
+import Navbar from "./components/Navbar.js";
 
 function App() {
   const [listOfPassengers, setListOfPassengers] = useState([]);
@@ -28,7 +29,14 @@ function App() {
         transition={{ type: "tween", duration: 1 }}
       >
         <div className="App">
-          {listOfPassengers[1] ? <AnimatedRoutes /> : <Loading />}
+          {listOfPassengers[1] ? (
+            <>
+              <Navbar />
+              <AnimatedRoutes />
+            </>
+          ) : (
+            <Loading />
+          )}
           <Footer />
         </div>
       </motion.div>

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "../components/Navbar";
 import "../styles/Home.css";
 import TeamCard from "../components/TeamCard";
 import { Link } from "react-router-dom";
@@ -18,7 +17,6 @@ function Home() {
 
   return (
     <main>
-      <Navbar />
       <div className="home-container">
         <div className="home-container-info summary">
           <h1>Check_in App</h1>

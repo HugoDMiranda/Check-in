@@ -7,7 +7,6 @@ import Modalcheck from "../components/Modalcheck";
 import Modalbooking from "../components/Modalbooking";
 import axios from "axios";
 import CheckInfo from "../components/CheckInfo";
-import Navbar from "../components/Navbar";
 
 function Checkin() {
   let { number } = useParams();
@@ -23,11 +22,10 @@ function Checkin() {
         setResponse(response.data[0]);
         setPassengers(response?.data[0].passengersFound);
       });
-  }, [passengers, number]);
+  }, [passengers, number, response]);
 
   return (
     <>
-      <Navbar />
       {openModalcheck && (
         <Modalcheck
           closeModalcheck={setOpenModalcheck}
@@ -42,7 +40,11 @@ function Checkin() {
         />
       )}
       <section className="check-container">
-        <CheckInfo response={response} />
+        <CheckInfo
+          response={response}
+          pilot={response.team?.pilot}
+          stewardesses={response.team?.stewardess}
+        />
         <div className="check-container-booking">
           <Buttons
             setOpenModalcheck={setOpenModalcheck}

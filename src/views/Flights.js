@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import FlightsCard from "../components/FlightsCard";
-import Navbar from "../components/Navbar";
 import "../styles/Flights.css";
 import axios from "axios";
 
@@ -17,7 +16,6 @@ function Flights() {
 
   return (
     <section>
-      <Navbar />
       <div className="flights-container">
         <details name="flights" className="flights-container-info domestic">
           <summary>Domestic Flights</summary>
