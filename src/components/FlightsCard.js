@@ -24,9 +24,15 @@ function FlightsCard({
           <h3>{destination}</h3>
         </div>
         <div className="card-container-info-time">
-          <p>{course}</p>
-          <p>Board at {departure}</p>
-          <p>Ends at {shipment}</p>
+          <p>
+            Course <strong>{course}</strong>
+          </p>
+          <p>
+            Board at <strong>{departure}</strong>
+          </p>
+          <p>
+            Ends at <strong>{shipment}</strong>
+          </p>
         </div>
       </div>
     </Link>

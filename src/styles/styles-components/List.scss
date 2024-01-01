@@ -40,7 +40,7 @@
     td {
       position: relative;
       padding: 15px;
-      background-color: rgba(255, 255, 255, 0.2);
+      background-color: rgba(0, 42, 89, 0.718);
       color: white;
     }
     td:hover:before {
@@ -50,11 +50,11 @@
       right: 0;
       top: -9999px;
       bottom: -9999px;
-      background-color: rgba(44, 149, 255, 0.2);
+      background-color: rgba(44, 149, 255, 0.8);
       z-index: -1;
     }
     tr:hover {
-      background-color: rgba(16, 127, 255, 0.3);
+      background-color: rgba(156, 202, 255, 0.7);
     }
   }
 }

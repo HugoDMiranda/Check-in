@@ -26,8 +26,9 @@
   border-top-left-radius: 15px;
   color: white;
   text-align: center;
-  font-size: 30px;
+  font-size: 40px;
   padding: 5px 0px;
+  font-weight: bold;
 }
 .check-container-info-fly p {
   width: 90%;
@@ -44,15 +45,36 @@
   justify-content: center;
 }
 .check-container-info-fly-times p {
-  font-size: small;
+  font-size: medium;
   text-align: center;
+  margin: 20px;
 }
 .check-container-info-fly-general {
   display: flex;
   width: 100%;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
+}
+.check-container-info-fly-general p {
+  text-align: center;
+}
+.check-container-info-fly-general-destination {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.check-container-info-fly-general-destination p {
+  width: 60px;
+  margin: 4px;
+}
+.check-container-info-fly-general-destination h4 {
+  margin: 0;
+  font-weight: bold;
+  font-size: 30px;
 }
 .check-container-info-team {
   display: flex;
@@ -61,6 +83,27 @@
   flex-direction: column;
   flex: 1;
   flex-wrap: wrap;
+}
+.check-container-info-team h4 {
+  background-color: rgb(9, 9, 121);
+  border: 2px solid rgb(9, 9, 121);
+  color: white;
+  font-weight: bold;
+  padding: 2px 10px;
+  border-radius: 30px;
+}
+.check-container-info-team h5,
+.check-container-info-team h6 {
+  margin: 0 0 6px 0;
+  color: rgb(9, 9, 121);
+  border: 2px solid rgb(9, 9, 121);
+  padding: 2px 10px;
+  border-radius: 30px;
+}
+.check-container-info-team-pilots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .check-container-info-team .pilot {
   border: 1px solid #0e73c6;

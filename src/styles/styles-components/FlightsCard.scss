@@ -1,5 +1,5 @@
 .card-container {
-  width: 230px;
+  width: 260px;
   background-color: white;
   opacity: 1;
   z-index: 1;
@@ -14,7 +14,7 @@
 
   &:hover {
     text-decoration: none;
-    width: 240px;
+    width: 280px;
   }
 
   &-img {
@@ -27,6 +27,12 @@
   }
 
   &-info {
+    &-number {
+      background-color: rgb(9, 9, 121);
+      color: white;
+      margin: 0;
+      font-weight: bold;
+    }
     &-destination {
       display: flex;
       justify-content: space-around;

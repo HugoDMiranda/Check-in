@@ -6,7 +6,7 @@ function Navbar() {
   return (
     <div className="check-navbar">
       <Logo />
-      <details>
+      {/* <details>
         <summary>
           <FaSearchPlus color="white" size="35px" />
         </summary>
@@ -15,7 +15,7 @@ function Navbar() {
           <input placeholder="Look for your Information" />
           <button className="check-navbar-button">Search</button>
         </div>
-      </details>
+      </details> */}
     </div>
   );
 }
