@@ -17,7 +17,6 @@ function App() {
       .then((response) => {
         setListOfPassengers(response.data);
       });
-    // console.log(listOfPassengers);
   }, [listOfPassengers]);
 
   return (
