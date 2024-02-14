@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import FlightsCard from "../components/FlightsCard";
 import "../styles/Flights.css";
 import axios from "axios";
@@ -22,18 +22,16 @@ function Flights() {
           <div className="flights-container-info-card">
             {listOfFlights.map((flight) => {
               return flight.class === "domestic" ? (
-                <Suspense fallback={<p>Loading...</p>}>
-                  <FlightsCard
-                    img="img/domestic.jpg"
-                    origin={flight.origin}
-                    destination={flight.destination}
-                    course={flight.course}
-                    departure={flight.departure}
-                    shipment={flight.shipment}
-                    number={flight.number}
-                    key={flight._id}
-                  />
-                </Suspense>
+                <FlightsCard
+                  img="img/domestic.jpg"
+                  origin={flight.origin}
+                  destination={flight.destination}
+                  course={flight.course}
+                  departure={flight.departure}
+                  shipment={flight.shipment}
+                  number={flight.number}
+                  key={flight._id}
+                />
               ) : null;
             })}
           </div>
@@ -46,18 +44,16 @@ function Flights() {
           <div className="flights-container-info-card">
             {listOfFlights.map((flight) => {
               return flight.class === "international" ? (
-                <Suspense fallback={<p>Loading...</p>}>
-                  <FlightsCard
-                    img="img/international.jpeg"
-                    origin={flight.origin}
-                    destination={flight.destination}
-                    course={flight.course}
-                    departure={flight.departure}
-                    shipment={flight.shipment}
-                    number={flight.number}
-                    key={flight._id}
-                  />
-                </Suspense>
+                <FlightsCard
+                  img="img/international.jpeg"
+                  origin={flight.origin}
+                  destination={flight.destination}
+                  course={flight.course}
+                  departure={flight.departure}
+                  shipment={flight.shipment}
+                  number={flight.number}
+                  key={flight._id}
+                />
               ) : null;
             })}
           </div>
