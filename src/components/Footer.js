@@ -12,8 +12,8 @@ function Footer() {
           <p>Accessibility</p>
           <p>Help / PQR</p>
         </div>
-        <p>Copyright © 1999-2023 Colombia XXXX.</p>
-        <p>712 Red Bark Ln, Henderson, NV 89011, EE. UU. </p>
+        <p>Copyright © 19XX-20XX Colombia XXXX.</p>
+        <p>XXX Red Bark Ln, Henderson, NV XXXXX, EE. UU. </p>
       </div>
     </footer>
   );
