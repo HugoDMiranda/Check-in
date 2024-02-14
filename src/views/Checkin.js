@@ -1,6 +1,6 @@
 import "../styles/Checkin.css";
 import { useParams } from "react-router-dom";
-import { useState, useEffect, Suspense } from "react";
+import { useState, useEffect } from "react";
 import Buttons from "../components/Buttons";
 import List from "../components/List";
 import Modalcheck from "../components/Modalcheck";
@@ -50,9 +50,7 @@ function Checkin() {
             setOpenModalcheck={setOpenModalcheck}
             setOpenModalbooking={setOpenModalbooking}
           />
-          <Suspense fallback={<p>Loading...</p>}>
-            <List listOfPassengers={passengers} />
-          </Suspense>
+          <List listOfPassengers={passengers} />
         </div>
       </section>
     </>
